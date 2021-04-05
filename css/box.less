@@ -1,0 +1,35 @@
+.box {
+  height: 200px;
+  width: 100%;
+  margin: 10px;
+  background-color: lightblue;
+  @media screen and (min-width: 600px) {
+    //600 and greater: Boxes in the content are now only 200px in width and have 8px border-radius
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+
+  }
+  @media screen and (min-width: 1080px) {
+    //1080 and greater: Boxes in the content are now 100px by 100px and using flexbox
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    flex-flow: row wrap;
+
+    .box:nth-child(3){
+      display: inline-block;
+      flex-flow: row wrap;
+    }
+  }
+
+  }
+
+//600
+//769
+//900
+//960
+//1080 and greater: Boxes in the content are now 100px by 100px and using flexbox, have the boxes be 2 to a row.
+// Boxes should not touch each other and should be spaced evenly between each other
+//1200
+//1366

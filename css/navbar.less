@@ -1,0 +1,54 @@
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+
+  a {
+    margin: 10px;
+    display: none;
+    text-align: right;
+    justify-content: right;
+  }
+    @media screen and (min-width: 900px) {
+      //900 and greater: all navigation links are aligned to the right side of the navigation bar and vertically centered.
+          a {
+            display: inline-flex;
+          text-align: right;
+          justify-self: right;
+            justify-content: right;
+
+    }
+      .dropdown {
+        display: none;
+      }
+    }
+}
+.dropdown{
+  display: flex;
+  text-align: left;
+  justify-self: left;
+  justify-content: left;
+  justify-items: left;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: blue;
+  min-width: 10px;
+  a {
+    margin: 10px;
+    display: inline-flex;
+    text-align: right;
+    justify-content: right;
+
+    justify-self: right;
+  }
+  //z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
